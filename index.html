@@ -1,127 +1,228 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Mr Ibironke's Contact Page</title>
-<link href="style.css" rel="stylesheet" type="text/css">
-<link rel="stylesheet" href="https://use.typekit.net/bmh6cli.css">
-<link rel="stylesheet" href="https://use.typekit.net/kso8env.css">
-<link rel="stylesheet" href="https://use.typekit.net/bmh6cli.css">
-<link rel="stylesheet" href="https://use.typekit.net/bmh6cli.css">
-<link rel="stylesheet" href="https://use.typekit.net/bmh6cli.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DE Icoredgr.</title>
+    <style>
+        :root {
+            --accent-red: #e63946;
+            --text-dark: #111;
+            --text-light: #666;
+            --radius-md: 0.5rem;
+        }
+
+        html {
+            font-family: -apple-system,BlinkMacSystemFont,"San Francisco","Helvetica Neue",Helvetica,Arial,sans-serif;
+            line-height: 1.55;
+            color: var(--text-dark)
+        }
+
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center
+        }
+
+        .wrapper {
+            max-width: 1100px;
+            width: 100%;
+            padding: 0 1.5rem 5rem
+        }
+
+        /* Header */
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 2.5rem 0 3rem
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.25rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            letter-spacing: -.018em
+        }
+
+            h1 .dot {
+                color: var(--accent-red);
+                margin-left: .15rem
+            }
+
+        .top-nav {
+            display: flex;
+            align-items: center;
+            gap: 2.25rem;
+            font-weight: 500
+        }
+
+            .top-nav a {
+                display: inline-flex;
+                align-items: center;
+                text-decoration: none;
+                color: var(--text-dark);
+                position: relative
+            }
+
+                .top-nav a::after {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    bottom: -2px;
+                    width: 100%;
+                    height: 1px;
+                    background: currentColor;
+                    transform: scaleX(0);
+                    transition: transform .2s ease;
+                    transform-origin: left
+                }
+
+                .top-nav a:hover::after {
+                    transform: scaleX(1)
+                }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            padding: .75rem 1.4rem;
+            border: 2px solid var(--text-dark);
+            border-radius: var(--radius-md);
+            background: transparent;
+            font-weight: 600;
+            text-decoration: none;
+            transition: background .15s,color .15s
+        }
+
+            .btn:hover {
+                background: var(--text-dark);
+                color: #fff
+            }
+
+        /* Intro */
+        .intro {
+            display: flex;
+            gap: 2rem;
+            max-width: 100%
+        }
+
+        .intro-text {
+            flex: 1
+        }
+
+            .intro-text p {
+                margin: 0 0 1.6rem;
+                font-size: 1.1rem;
+                text-align: justify;
+                text-justify: inter-word
+            }
+
+        .greeting {
+            font-size: 1.45rem;
+            font-weight: 700;
+            line-height: 1.4;
+            letter-spacing: -.01em
+        }
+
+        .intro-img {
+            width: 260px;
+            max-width: 40%;
+            border-radius: var(--radius-md);
+            object-fit: cover
+        }
+
+        /* Links */
+        .links {
+            margin-top: .5rem
+        }
+
+            .links ul {
+                list-style: disc;
+                padding-left: 1.2rem;
+                margin: 0
+            }
+
+            .links li {
+                margin-bottom: .65rem
+            }
+
+            .links a {
+                text-decoration: underline;
+                text-underline-offset: 3px;
+                font-weight: 500;
+                transition: opacity .2s
+            }
+
+                .links a:hover {
+                    opacity: .7
+                }
+
+        footer {
+            margin-top: 4.5rem;
+            font-size: .85rem;
+            color: var(--text-light)
+        }
+
+        /* Responsive */
+        @media(max-width:800px) {
+            .intro {
+                flex-direction: column
+            }
+
+            .intro-img {
+                width: 100%;
+                max-width: 100%
+            }
+        }
+
+        @media(max-width:640px) {
+            header {
+                flex-direction: column;
+                gap: 1.4rem;
+                align-items: flex-start
+            }
+
+            .top-nav {
+                gap: 1.4rem
+            }
+        }
+    </style>
 </head>
+<body>
+    <div class="wrapper">
+        <header>
+            <h1>DE Icoredgr<span class="dot">.</span></h1>
+            <nav class="top-nav">
+                <a href="https://medium.com/@your-handle" target="_blank" rel="noopener">Read my thoughts</a>
+                <a href="mailto:hello@mikedelta.org" class="btn">Let’s Chat</a>
+            </nav>
+        </header>
 
-<body data-gr-c-s-loaded="true">
-<header id="site-header">
-    <p><img class="profilepic" src="myAvatar-6.png" /></p>
-<p><h1> Mr. Ibironke </h1>
-    
-    <h4> Specialization:  Logistics & Digital Media</h4>
-    <strong>Email:</strong> mdsocialmgr@gmail.com<br>
-    <strong>Phone:</strong> +1 (617) 500 75**<br>
-   <!-- <strong>Meeting Request:</strong> <a href="http://doodle.com/mribironke">[Doddle]</a><br>--> 
-    <div class="engage">
-        <a href="https://twitter.com/MrIbironke">[Twitter]</a>
-        <a href="https://www.linkedin.com/in/MrIbironke/">[LinkedIn]</a>
-        <a href="https://medium.com/@MrIbironke">[Medium]</a>
-        <a href="https://instagram.com/MrIbironke">[Instagram]</a>
+        <section class="intro">
+            <div class="intro-text">
+                <p class="greeting">Hello! You can call me “DE”!</p>
+                <p>Experienced <strong>global logistics professional</strong> with a strong track record in optimising complex supply chains and leading pre‑FID strategic logistics planning for multibillion‑dollar LNG projects.</p>
+                <p>I’m also an accomplished <strong>product developer</strong> and <strong>manager</strong>, having delivered impactful digital solutions across the energy sector on three continents by blending deep operational insight with inventive product thinking.</p>
+                <p><strong>Let’s chat.</strong></p>
+            </div>
+            <!-- Replace with real portrait -->
+            <img src="portrait.jpg" alt="DE Icoredgr portrait" class="MyProfilePicture.png" />
+        </section>
+
+        <section class="links" aria-label="Social & Projects">
+            <ul>
+                <li><a href="https://www.linkedin.com/in/MrIbironke/" target="_blank" rel="noopener">LinkedIn</a> — documenting my professional journey</li>
+                <li><a href="https://instagram.com/MrIbironke" target="_blank" rel="noopener">Instagram</a> — blogging my social journey visually</li>
+                <li><a href="https://twitter.com/MrIbironke" target="_blank" rel="noopener">X (formerly Twitter)</a> — tweeting my semi‑social journey</li>
+                <li><a href="https://ibironke.medium.com/" target="_blank" rel="noopener">Medium</a> — occasionally sharing long‑form thoughts</li>
+                <li><a href="https://mikedelta.org" target="_blank" rel="noopener">The Mike Delta Center</a> — educating and guiding the next generation</li>
+                <li><a href="https://mribironke.org" target="_blank" rel="noopener">OV</a> — where I build cool things and invest</li>
+            </ul>
+        </section>
+
+        <footer>© 2025 DE Icoredgr. Crafted in Keynote, coded with AI — zero lines of hand‑written code.</footer>
     </div>
-</p>
-
-    <!--<p> Logistics, Communication, and Digital in Nigeria.</p>--> 
-    <p>
-        <h2>BIO</h2><br>
-        <h3>In brief...</h3><br>
-        MD Ibironke is a Logistician operating within the energy industry with a focus on 'smart data use' in upstream logistics activities. 
-He co-founded <a href="http://mikedelta.org">Mike Delta Initiative</a> in 2019, focusing on promoting quality education and decent work & economic growth (SDG 4 & 8).<br>
-        <h3>A bit more...</h3><br>
-        MD Ibironke is an experienced Logistician operating within the energy industry with a focus on 'smart data use' in upstream logistics activities — utilizing data to drive business & process improvement, thereby simplifying logistics operations.<br>
-He co-founded <a href="http://mikedelta.org">Mike Delta Initiative</a> in 2019, focusing on promoting quality education and decent work & economic growth (SDG 4 & 8); and keen on mentoring the younger generation.<br>
-MD is a trained communication and digital media professional. A polymath.
-</p>
-
-<!-- 
-    I like to use Lorem Ipsum to block space.
-    Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-    when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-    It has survived not only five centuries, but also the leap into electronic typesetting, 
-    remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing 
-    Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions 
-    of Lorem Ipsum
--->
-
-<!--
-Some Adobe Fonts I used.
-
- Vox Bold Italic
-font-family: vox, sans-serif;
-font-weight: 700;
-font-style: italic;
-
-Vox Bold
-font-family: vox, sans-serif;
-font-weight: 700;
-font-style: normal;
-
-Vox Italic
-font-family: vox, sans-serif;
-font-weight: 400;
-font-style: italic;
-
-Vox Regular
-font-family: vox, sans-serif;
-font-weight: 400;
-font-style: normal;
-
-Vox Round Bold Italic
-font-family: vox-round, sans-serif;
-font-weight: 700;
-font-style: italic;
-
-Vox Round Bold
-font-family: vox-round, sans-serif;
-font-weight: 700;
-font-style: normal;
-
-Vox Round Italic
-font-family: vox-round, sans-serif;
-font-weight: 400;
-font-style: italic;
-
-Vox Round Regular
-font-family: vox-round, sans-serif;
-font-weight: 400;
-font-style: normal;
-
-Acumin Pro Bold
-font-family: acumin-pro, sans-serif;
-font-weight: 700;
-font-style: normal;
-
-IvyMode Light
-font-family: ivymode, sans-serif;
-font-weight: 300;
-font-style: normal;
-
-Alegreya Italic
-font-family: alegreya, serif;
-font-weight: 400;
-font-style: italic;
-
--->
-
-<!--
-    Acknowledgement:
-    As this is my first html site, I say thanks to Ire Aderinokun & Prof. Yong-Yeol;
-    I used their websites, https://ireaderinokun.com & http://yongyeol.com, as a guide for this project...
-    ...started 22 Mar 2020  & completed 23 Mar 2020.
-
--->
-
-<div class="footer">
-    © Mr. Ibironke, 2020<br />
-</div>
-
 </body>
 </html>
